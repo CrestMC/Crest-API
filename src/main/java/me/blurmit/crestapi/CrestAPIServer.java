@@ -1,10 +1,12 @@
 package me.blurmit.crestapi;
 
+import me.blurmit.crestapi.action.ActionManager;
 import me.blurmit.crestapi.database.DatabaseManager;
 import me.blurmit.crestapi.server.Connection;
 import me.blurmit.crestapi.server.Server;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class CrestAPIServer {
@@ -13,6 +15,7 @@ public class CrestAPIServer {
 
     private final Server server;
     private final DatabaseManager databaseManager;
+    private final ActionManager actionManager;
 
     private final Set<Connection> activeConnections;
 
@@ -24,6 +27,7 @@ public class CrestAPIServer {
         INSTANCE = this;
 
         databaseManager = new DatabaseManager();
+        actionManager = new ActionManager();
         server = new Server(port);
 
         activeConnections = new HashSet<>();
@@ -51,6 +55,10 @@ public class CrestAPIServer {
 
     public DatabaseManager getDatabaseManager() {
         return databaseManager;
+    }
+
+    public ActionManager getActionManager() {
+        return actionManager;
     }
 
     public Set<Connection> getActiveConnections() {

@@ -1,7 +1,8 @@
 package me.blurmit.crestapi.server;
 
 import me.blurmit.crestapi.CrestAPIServer;
-import me.blurmit.crestapi.api.Action;
+import me.blurmit.crestapi.action.AbstractAction;
+import me.blurmit.crestapi.action.ActionManager;
 import me.blurmit.crestapi.connection.Headers;
 
 import java.io.BufferedReader;
@@ -10,7 +11,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Connection extends Thread {
 
@@ -51,15 +54,25 @@ public class Connection extends Thread {
             }
 
             requestData = Arrays.asList(inputBuilder.toString().split("\n"));
-
-            Action.checkContainsKey(this);
-            Action.checkValidKey(this, Action.getAPIKey(this));
-
-            // Pass connection onto the action handler for processing
-            String action = Headers.getArgument("action", requestData);
-            Action.getByName(action).handleConnection(this);
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        ActionManager actionManager = CrestAPIServer.getInstance().getActionManager();
+        actionManager.checkContainsKey(this);
+        actionManager.checkValidKey(this, actionManager.getAPIKey(this));
+
+        // Pass connection onto the action handler for processing
+        String name = Headers.getArgument("action", requestData);
+        AbstractAction action = actionManager.getByName(name);
+
+        try {
+            action.handleConnection(this);
+        } catch (Exception e) {
+            System.err.println("An error occurred whilst attempting to handle connection #" + getID());
+            e.printStackTrace();
+
+            actionManager.sendBadRequestResponse(this, "Something went wrong while handling this request (" + e.getClass().getName() + ")");
         }
     }
 

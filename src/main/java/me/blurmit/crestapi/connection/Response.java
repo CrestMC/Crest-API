@@ -6,7 +6,7 @@ import com.google.gson.GsonBuilder;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum Responses {
+public enum Response {
 
     OK() {
         @SafeVarargs
@@ -15,7 +15,7 @@ public enum Responses {
             data[0].put("code", code());
             data[0].put("success", true);
 
-            return message() + getDefaultHeaders() + OK.jsonBuilder.create().toJson(data, HashMap[].class);
+            return message() + getDefaultHeaders() + getJsonBuilder().create().toJson(data, HashMap[].class);
         }
 
         @Override
@@ -35,12 +35,12 @@ public enum Responses {
             data[0].put("code", code());
             data[0].put("success", false);
 
-            return message() + getDefaultHeaders() + BAD_REQUEST.jsonBuilder.create().toJson(data, HashMap[].class);
+            return message() + getDefaultHeaders() + getJsonBuilder().create().toJson(data, HashMap[].class);
         }
 
         @Override
         public String message() {
-            return "HTTP/2 403 Bad Request\n";
+            return "HTTP/2 400 Bad Request\n";
         }
 
         @Override
@@ -55,7 +55,7 @@ public enum Responses {
             data[0].put("code", code());
             data[0].put("success", false);
 
-            return message() + getDefaultHeaders() + UNAUTHORIZED.jsonBuilder.create().toJson(data, HashMap[].class);
+            return message() + getDefaultHeaders() + getJsonBuilder().create().toJson(data, HashMap[].class);
         }
 
         @Override
@@ -75,7 +75,7 @@ public enum Responses {
             data[0].put("code", code());
             data[0].put("success", false);
 
-            return message() + getDefaultHeaders() + RATELIMIT.jsonBuilder.create().toJson(data, HashMap[].class);
+            return message() + getDefaultHeaders() + getJsonBuilder().create().toJson(data, HashMap[].class);
         }
 
         @Override
@@ -92,7 +92,7 @@ public enum Responses {
     private final GsonBuilder jsonBuilder;
     private final String defaultHeaders;
 
-    Responses() {
+    Response() {
         jsonBuilder = new Gson().newBuilder();
         defaultHeaders = "Content-Type: application/json" + "\n" +
                         "Cache-Control: no-store" + "\n" +
@@ -101,6 +101,10 @@ public enum Responses {
 
     public String getDefaultHeaders() {
         return defaultHeaders;
+    }
+
+    public GsonBuilder getJsonBuilder() {
+        return jsonBuilder;
     }
 
     public abstract String build(Map<String, Object>... data);

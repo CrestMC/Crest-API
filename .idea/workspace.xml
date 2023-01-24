@@ -4,7 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17539490-8021-49ce-85bf-ec6c6428481a" name="Changes" comment="" />
+    <list default="true" id="17539490-8021-49ce-85bf-ec6c6428481a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_0_1_jre.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/AbstractAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/ActionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/CreateAPIKeyAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/DeleteAPIKeyAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/GetAPIKeyAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/GetPlayerAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/GetPlayerPunishmentsAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/GetRankAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/SetAdminKeyAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/UnknownAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/action/defined/UnsetAdminKeyAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/util/ReflectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crest-API.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Crest-API.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/CrestAPIServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/CrestAPIServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/api/Action.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/connection/Headers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/connection/Headers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/connection/Responses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/connection/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/server/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/blurmit/crestapi/server/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/api/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/connection/Headers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/connection/Headers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/connection/Responses$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/connection/Responses$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/connection/Responses$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/connection/Responses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/database/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/database/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/server/Connection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/blurmit/crestapi/server/Connection.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +59,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
